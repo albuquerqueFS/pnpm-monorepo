@@ -1,0 +1,20 @@
+# Monorepo Project Template with PNPM
+
+This project provides a base setup with some commands and helpers for creating a monorepo (with any framework) using **PNPM**.
+
+## Command List
+
+### 1. Run a Command in a Specific Folder
+
+To run a command within a specific folder (e.g., `remix-blog`), use the following:
+
+```bash
+pnpm --filter remix-blog dev
+
+pnpm add --filter shared-ui typescript -D
+
+pnpm add <package> --filter <app> --workspace
+
+pnpm run -r "command"
+
+```
