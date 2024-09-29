@@ -1,4 +1,4 @@
-# Monorepo Project Template with PNPM
+### Monorepo Project Template with PNPM
 
 This project provides a base setup with some commands and helpers for creating a monorepo (with any framework) using **PNPM**.
 
@@ -10,11 +10,29 @@ To run a command within a specific folder (e.g., `remix-blog`), use the followin
 
 ```bash
 pnpm --filter remix-blog dev
+```
 
+###2. Install a Package in a Specific Project
+To install a package (e.g., typescript) as a development dependency in a specific project (e.g., shared-ui), use:
+
+```bash
 pnpm add --filter shared-ui typescript -D
+```
 
+### 3. Add a Package to an App
+
+To add a package to a specific app (e.g., <app>), use the following command. This will add the package to the specified app in the workspace:
+
+```bash
 pnpm add <package> --filter <app> --workspace
+```
 
+Note: When linking a package, PNPM will create a symlink inside the node_modules of the target app to avoid file duplication.
+
+### 4. Run a Command in All Folders
+
+To run a command across all projects in the workspace, use:
+
+```bash
 pnpm run -r "command"
-
 ```
